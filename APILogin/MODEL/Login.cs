@@ -7,7 +7,8 @@ namespace APILogin.MODEL
 {
     public class Login
     {
-        public string User { get; set; }
-        public string Password { get; set; }
+        public long? Id { get; set; }
+        public string Usuario { get; set; }
+        public string Senha { get; set; }
     }
 }

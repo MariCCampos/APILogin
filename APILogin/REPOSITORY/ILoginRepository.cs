@@ -1,13 +1,16 @@
-﻿using APILogin.MODEL;
-using System;
+﻿using APILogin.DATA.VO;
+using APILogin.MODEL;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace APILogin.REPOSITORY
 {
-    interface ILoginRepository
+    public interface ILoginRepository
     {
-        Login Find(Login login );
+        Login Consult(Login login);
+        Login FindById(long id);
+        List<Login> FindAll();
+        Login Update(Login login);
+        void Delete(long id);
+        bool Exist(long? id);
     }
 }
