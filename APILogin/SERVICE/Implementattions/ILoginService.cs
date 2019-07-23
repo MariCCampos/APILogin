@@ -8,7 +8,7 @@ namespace APILogin.SERVICE.Implementattions
     public interface ILoginService
     {
         LoginVO Consult(LoginVO login);
-        LoginVO FindById(long id);
+        LoginVO Create(LoginVO login);
         List<LoginVO> FindAll();
         LoginVO Update(LoginVO login);
         void Delete(long id);

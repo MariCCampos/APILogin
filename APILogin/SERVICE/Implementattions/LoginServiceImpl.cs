@@ -38,9 +38,11 @@ namespace APILogin.SERVICE.Implementattions
             return null;
         }
 
-        public LoginVO FindById(long id)
+        public LoginVO Create(LoginVO login)
         {
-            return _converter.Parse(_repository.FindById(id));
+            var loginEntity = _converter.Parse(login);
+            loginEntity = _repository.Create(loginEntity);
+            return _converter.Parse(loginEntity);
         }
 
         public List<LoginVO> FindAll()

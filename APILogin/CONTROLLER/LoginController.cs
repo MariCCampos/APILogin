@@ -26,8 +26,8 @@ namespace APILogin.CONTROLLER
             return new OkObjectResult(_loginService.FindAll());
         }
 
-        [HttpPost("v1")]
-        public IActionResult Post([FromBody]LoginVO login)
+        [HttpPost("v1/consultalogin")]
+        public IActionResult Consult([FromBody]LoginVO login)
         {
             if (login == null) return BadRequest();
             var result = _loginService.Consult(login);
@@ -35,12 +35,11 @@ namespace APILogin.CONTROLLER
             return Ok(result);
         }
 
-        [HttpGet("v1/{id}")]
-        public IActionResult Get(long id)
+        [HttpPost("v1/cadastro")]
+        public IActionResult Create([FromBody]LoginVO login)
         {
-            var login = _loginService.FindById(id);
-            if (login == null) return NotFound();
-            return new OkObjectResult(login);
+            if (login == null) return BadRequest();
+            return new ObjectResult(_loginService.Create(login));
         }
 
         [HttpPut("v1")]

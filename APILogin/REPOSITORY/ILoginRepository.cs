@@ -7,7 +7,7 @@ namespace APILogin.REPOSITORY
     public interface ILoginRepository
     {
         Login Consult(Login login);
-        Login FindById(long id);
+        Login Create(Login login);
         List<Login> FindAll();
         Login Update(Login login);
         void Delete(long id);

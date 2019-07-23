@@ -49,9 +49,18 @@ namespace APILogin.REPOSITORY
             return _context.Login.ToList();
         }
 
-        public Login FindById(long id)
+        public Login Create(Login login)
         {
-            return _context.Login.SingleOrDefault(p => p.Id.Equals(id));
+            try
+            {
+                _context.Add(login);
+                _context.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return login;
         }
 
         public Login Update(Login login)

@@ -11,3 +11,4 @@ C:\Users\mccampos\Documents\APILogin\APILogin\APILogin\obj\Debug\netcoreapp2.1\A
 C:\Users\mccampos\Documents\APILogin\APILogin\APILogin\bin\Debug\netcoreapp2.1\APILogin.pdb
 C:\Users\mccampos\Documents\APILogin\APILogin\APILogin\obj\Debug\netcoreapp2.1\APILogin.dll
 C:\Users\mccampos\Documents\APILogin\APILogin\APILogin\obj\Debug\netcoreapp2.1\APILogin.pdb
+C:\Users\mccampos\Documents\APILogin\APILogin\APILogin\obj\Debug\netcoreapp2.1\APILogin.csprojAssemblyReference.cache
