@@ -38,7 +38,7 @@ namespace APILogin.CONTROLLER
         [HttpPost("v1/cadastro")]
         public IActionResult Create([FromBody]LoginVO login)
         {
-            if (login == null) return BadRequest();
+            if (login.Usuario == null && login.Senha == null) return BadRequest();
             return new ObjectResult(_loginService.Create(login));
         }
 

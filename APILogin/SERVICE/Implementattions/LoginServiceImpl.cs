@@ -40,9 +40,16 @@ namespace APILogin.SERVICE.Implementattions
 
         public LoginVO Create(LoginVO login)
         {
-            var loginEntity = _converter.Parse(login);
-            loginEntity = _repository.Create(loginEntity);
-            return _converter.Parse(loginEntity);
+            if (login.Usuario != null && login.Senha !=null)
+            {
+                var loginEntity = _converter.Parse(login);
+                loginEntity = _repository.Create(loginEntity);
+                return _converter.Parse(loginEntity);
+            }
+            else
+            {
+                return null;
+            }
         }
 
         public List<LoginVO> FindAll()
